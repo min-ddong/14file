@@ -5,7 +5,7 @@
 
 struct Book {
 	int number;
-	char title[10];
+	char title[20];
 };
 
 int main(int argc, char *argv[]) {
@@ -23,6 +23,8 @@ int main(int argc, char *argv[]) {
 	
 	(p+1)->number = 2;
 	strcpy((p+1)->title, "Electronics");
+	
+	printf("%s %s\n", p->title, (p+1)->title);
 	
 	free(p);
 
